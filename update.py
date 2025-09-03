@@ -14,7 +14,6 @@ FROM
 
 logging.getLogger().setLevel(logging.DEBUG)
 
-path = get_db_path()
 now = datetime.now()
 with sqlite3.connect(get_db_path()) as conn:
 	for row in conn.execute(QUERY).fetchall():

@@ -16,6 +16,7 @@ By {author}"""
 @InputSource
 class Github:
 	def is_url_valid(url: str) -> bool:
+		# Accepted url: https://github.com/[^/]+/[^/]+
 		if not url.startswith(GITHUB_PREFIX):
 			return False
 		url = url[len(GITHUB_PREFIX):]
